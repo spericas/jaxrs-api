@@ -13,7 +13,7 @@
 
 Constraint annotations are allowed in the same locations as the
 following annotations: `@MatrixParam`, `@QueryParam`, `@PathParam`,
-`@CookieParam`, `@HeaderParam` and `@Context`, _except_ in class
+`@CookieParam` and `@HeaderParam`, _except_ in class
 constructors and property setters. Specifically, they are allowed in
 resource method parameters, fields and property getters as well as
 resource classes, entity parameters and resource methods (return

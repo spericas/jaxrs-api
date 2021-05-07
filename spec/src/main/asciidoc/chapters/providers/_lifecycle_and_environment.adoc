@@ -63,9 +63,7 @@ have a public constructor for which the JAX-RS runtime can provide all
 parameter values. Note that a zero argument constructor is permissible
 under this rule.
 
-A public constructor MAY include parameters annotated with
-`@Context`—Chapter <<context>> defines the parameter types permitted for
-this annotation. Since providers may be created outside the scope of a
+Since providers may be created outside the scope of a
 particular request, only deployment-specific properties may be available
 from injected interfaces at construction time; request-specific
 properties are available when a provider method is called. If more than
