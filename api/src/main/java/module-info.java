@@ -29,5 +29,4 @@ module jakarta.ws.rs {
     uses jakarta.ws.rs.ext.RuntimeDelegate;
     uses jakarta.ws.rs.sse.SseEventSource.Builder;
 
-    opens jakarta.ws.rs.core to jakarta.xml.bind;
 }
