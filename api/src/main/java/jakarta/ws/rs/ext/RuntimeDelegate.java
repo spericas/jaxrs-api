@@ -24,8 +24,8 @@ import jakarta.ws.rs.SeBootstrap;
 import jakarta.ws.rs.SeBootstrap.Instance;
 import jakarta.ws.rs.core.Application;
 import jakarta.ws.rs.core.Link;
-import jakarta.ws.rs.core.UriBuilder;
 import jakarta.ws.rs.core.Response.ResponseBuilder;
+import jakarta.ws.rs.core.UriBuilder;
 import jakarta.ws.rs.core.Variant.VariantListBuilder;
 
 /**

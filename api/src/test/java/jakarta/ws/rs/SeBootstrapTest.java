@@ -1,5 +1,17 @@
 package jakarta.ws.rs;
 
+import javax.net.ssl.SSLContext;
+import java.util.concurrent.CompletionStage;
+
+import jakarta.ws.rs.SeBootstrap;
+import jakarta.ws.rs.SeBootstrap.Configuration;
+import jakarta.ws.rs.SeBootstrap.Configuration.SSLClientAuthentication;
+import jakarta.ws.rs.core.Application;
+import jakarta.ws.rs.ext.RuntimeDelegate;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.sameInstance;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -8,20 +20,6 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoMoreInteractions;
-
-import java.util.concurrent.CompletionStage;
-
-import javax.net.ssl.SSLContext;
-
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
-import jakarta.ws.rs.SeBootstrap;
-import jakarta.ws.rs.SeBootstrap.Configuration;
-import jakarta.ws.rs.SeBootstrap.Configuration.SSLClientAuthentication;
-import jakarta.ws.rs.core.Application;
-import jakarta.ws.rs.ext.RuntimeDelegate;
 
 /**
  * Unit tests for {@link SeBootstrap}

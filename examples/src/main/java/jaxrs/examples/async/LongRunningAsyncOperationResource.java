@@ -15,13 +15,14 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import static java.util.concurrent.TimeUnit.SECONDS;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.container.AsyncResponse;
+
+import static java.util.concurrent.TimeUnit.SECONDS;
 
 /**
  * Long-running asynchronous processing examples.

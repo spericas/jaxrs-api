@@ -17,10 +17,8 @@
 package jakarta.ws.rs.core;
 
 import java.net.URI;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 
 import jakarta.ws.rs.ext.RuntimeDelegate;
 

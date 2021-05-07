@@ -20,7 +20,6 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.Link;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.UriInfo;
-
 import jaxrs.examples.link.clusterservice.Cluster.Status;
 
 /**

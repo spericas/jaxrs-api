@@ -16,11 +16,10 @@
 
 package jakarta.ws.rs;
 
+import javax.net.ssl.SSLContext;
 import java.util.Optional;
 import java.util.concurrent.CompletionStage;
 import java.util.function.BiFunction;
-
-import javax.net.ssl.SSLContext;
 
 import jakarta.ws.rs.core.Application;
 import jakarta.ws.rs.ext.RuntimeDelegate;
