@@ -14,7 +14,7 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  */
 
-package jakarta.ws.rs.core;
+package jakarta.ws.rs;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -22,6 +22,12 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+/**
+ * <p>Annotation that identifies the entity parameter.</p>
+ *
+ * @author Santiago Pericas-Geertsen
+ * @since 4.0
+ */
 @Target({ ElementType.PARAMETER })
 @Retention(RetentionPolicy.RUNTIME)
 @Documented

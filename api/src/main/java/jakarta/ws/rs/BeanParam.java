@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2012, 2021 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0, which is available at
@@ -22,7 +22,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import jakarta.ws.rs.core.Entity;
+import jakarta.inject.Qualifier;
 
 /**
  * The annotation that may be used to inject custom JAX-RS "parameter aggregator" value object into a resource class
@@ -70,5 +70,6 @@ import jakarta.ws.rs.core.Entity;
 @Target({ ElementType.PARAMETER, ElementType.METHOD, ElementType.FIELD })
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
+@Qualifier
 public @interface BeanParam {
 }

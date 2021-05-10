@@ -16,7 +16,7 @@
 
 package jakarta.ws.rs.ext;
 
-import jakarta.ws.rs.core.Entity;
+import jakarta.ws.rs.Entity;
 
 /**
  * Contract for a provider that supplies context information to resource classes and other providers.

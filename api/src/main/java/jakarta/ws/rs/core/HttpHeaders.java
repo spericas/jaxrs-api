@@ -21,6 +21,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
+import jakarta.ws.rs.Entity;
+
 /**
  * An injectable interface that provides access to HTTP header information. All methods throw
  * {@link java.lang.IllegalStateException} if called outside the scope of a request (e.g. from a provider constructor).

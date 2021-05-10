@@ -20,6 +20,7 @@ import java.util.Collection;
 import java.util.Map;
 import java.util.Set;
 
+import jakarta.ws.rs.Entity;
 import jakarta.ws.rs.RuntimeType;
 
 /**

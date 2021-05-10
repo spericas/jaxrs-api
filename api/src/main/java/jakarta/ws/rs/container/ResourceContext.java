@@ -16,7 +16,7 @@
 
 package jakarta.ws.rs.container;
 
-import jakarta.ws.rs.core.Entity;
+import jakarta.ws.rs.Entity;
 
 /**
  * The resource context provides access to instances of resource classes.

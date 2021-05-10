@@ -13,7 +13,7 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.container.AsyncResponse;
-import jakarta.ws.rs.core.Entity;
+import jakarta.ws.rs.Entity;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.UriInfo;
 import jakarta.ws.rs.sse.Sse;
@@ -28,6 +28,11 @@ public class SampleResource1 {
     // Use @Inject instead of @Context
     @Inject
     private UriInfo uriInfo;
+
+    // Use of @HeaderParam as CDI qualifier
+    @Inject
+    @HeaderParam("who")
+    private String who;
 
     // CDI Injection in constructor
     @Inject

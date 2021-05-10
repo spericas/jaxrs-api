@@ -19,7 +19,7 @@ package jakarta.ws.rs.ext;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
 
-import jakarta.ws.rs.core.Entity;
+import jakarta.ws.rs.Entity;
 import jakarta.ws.rs.core.MediaType;
 
 /**

@@ -18,6 +18,8 @@ package jakarta.ws.rs.core;
 
 import java.util.Map;
 
+import jakarta.ws.rs.Entity;
+
 /**
  * Represents a client or server-side configurable context in JAX-RS.
  *

@@ -20,6 +20,8 @@ import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
 
+import jakarta.ws.rs.Entity;
+
 /**
  * Defines the components of a JAX-RS application and supplies additional meta-data. A JAX-RS application or
  * implementation supplies a concrete subclass of this abstract class.

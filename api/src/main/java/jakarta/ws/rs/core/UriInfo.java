@@ -19,6 +19,8 @@ package jakarta.ws.rs.core;
 import java.net.URI;
 import java.util.List;
 
+import jakarta.ws.rs.Entity;
+
 /**
  * An injectable interface that provides access to application and request URI information. Relative URIs are relative
  * to the base URI of the application, see {@link #getBaseUri}.

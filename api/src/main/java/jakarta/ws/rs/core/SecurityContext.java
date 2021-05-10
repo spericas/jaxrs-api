@@ -18,6 +18,8 @@ package jakarta.ws.rs.core;
 
 import java.security.Principal;
 
+import jakarta.ws.rs.Entity;
+
 /**
  * An injectable interface that provides access to security related information.
  *
