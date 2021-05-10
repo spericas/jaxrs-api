@@ -22,6 +22,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+import jakarta.enterprise.util.Nonbinding;
 import jakarta.inject.Qualifier;
 
 /**
@@ -79,5 +80,5 @@ public @interface FormParam {
      *
      * @return form parameter name.
      */
-    String value();
+    @Nonbinding String value();
 }

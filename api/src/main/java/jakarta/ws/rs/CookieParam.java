@@ -22,6 +22,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+import jakarta.enterprise.util.Nonbinding;
 import jakarta.inject.Qualifier;
 
 /**
@@ -66,5 +67,5 @@ public @interface CookieParam {
      *
      * @return HTTP cookie name.
      */
-    String value();
+    @Nonbinding String value();
 }

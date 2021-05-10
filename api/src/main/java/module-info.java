@@ -18,6 +18,7 @@ module jakarta.ws.rs {
 
     requires java.logging;
     requires jakarta.inject;
+    requires jakarta.cdi;
 
     exports jakarta.ws.rs;
     exports jakarta.ws.rs.client;
