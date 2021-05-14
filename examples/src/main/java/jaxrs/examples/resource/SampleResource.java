@@ -21,9 +21,7 @@ import jakarta.ws.rs.sse.SseEventSink;
 
 @Path("/greet1")    // CDI bean-defining annotation
 @RequestScoped      // implied by default
-public class SampleResource1 {
-
-    private final GreetBean greetBean;
+public class SampleResource {
 
     // Use @Inject instead of @Context
     @Inject
@@ -34,24 +32,29 @@ public class SampleResource1 {
     @HeaderParam("who")
     private String who;
 
+    private final GreetBean bean;
+
+    private final String lang;
+
     // CDI Injection in constructor
     @Inject
-    public SampleResource1(GreetBean greetingConfig) {
-        this.greetBean = greetingConfig;
+    public SampleResource(GreetBean bean, @QueryParam("lang") String lang) {
+        this.bean = bean;
+        this.lang = lang;
     }
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public String getMessage(@HeaderParam("who") String who) {
-        return greetBean.getMessage() + " " + who;
+    public String getMessage() {
+        return bean.getMessage(lang) + " " + who;
     }
 
     // Use of @Entity is required
     @POST
     @Consumes(MediaType.TEXT_PLAIN)
     public void putMessage(@QueryParam("override") boolean override, @Entity String message) {
-        if (greetBean.getMessage().isEmpty() || override) {
-            greetBean.setMessage(message);
+        if (bean.getMessage(lang).isEmpty() || override) {
+            bean.setMessage(message);
         }
     }
 
@@ -61,8 +64,8 @@ public class SampleResource1 {
     @Consumes(MediaType.TEXT_PLAIN)
     public void putMessageAsync(@QueryParam("override") boolean override, @Entity String message, AsyncResponse ar) {
         Executors.newSingleThreadExecutor().submit(() -> {
-            if (greetBean.getMessage().isEmpty() || override) {
-                greetBean.setMessage(message);
+            if (bean.getMessage(lang).isEmpty() || override) {
+                bean.setMessage(message);
             }
             ar.resume("Done");
         });
@@ -74,6 +77,6 @@ public class SampleResource1 {
     @Path("sse")
     @Produces(MediaType.SERVER_SENT_EVENTS)
     public void getMessage(@HeaderParam("who") String who, Sse sse, SseEventSink sseEventSink) {
-        sseEventSink.send(sse.newEvent(greetBean.getMessage() + " " + who));
+        sseEventSink.send(sse.newEvent(bean.getMessage(lang) + " " + who));
     }
 }

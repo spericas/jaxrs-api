@@ -14,7 +14,7 @@ public class GreetBean {
         this.message.set("Hello");
     }
 
-    String getMessage() {
+    String getMessage(String lang) {
         return message.get();
     }
 
