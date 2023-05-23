@@ -84,7 +84,7 @@
     </licenses>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
 
         <apidocs.title>Jakarta RESTful Web Services ${spec.version} API Specification ${spec.version.revision}</apidocs.title>
         <legal.doc.folder>${project.basedir}</legal.doc.folder>
@@ -108,9 +108,9 @@
     </properties>
 
     <modules>
-        <module>api</module>
+        <module>jaxrs-api</module>
         <module>examples</module>
-        <module>spec</module>
+        <module>jaxrs-spec</module>
     </modules>
 
     <dependencyManagement>
